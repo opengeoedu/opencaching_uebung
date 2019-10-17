@@ -2,14 +2,10 @@
 
 Dieses Repositorium enthält Ressourcen und Werkzeuge, die für die Umsetzung die zur Auswertung von GeoCaching-Daten der Plattform https://www.opencaching.de/ im Zusammenhang mit europäischen Statistiken (siehe https://ec.europa.eu/eurostat) und Landnutzungsdaten (siehe https://land.copernicus.eu/pan-european/corine-land-cover/).
 
-Die Auswertung ist Teil einer Übung des offenen Onlinekurses OpenGeoEdu im Rahmen des gleichnamigen Projektes (https://www.opengeoedu.de). 
+Die Auswertung ist Gegenstand einer Übung des offenen Onlinekurses OpenGeoEdu im Rahmen des gleichnamigen Projektes (https://www.opengeoedu.de). Ausführliche Anleitungen dazu werden bald im **Kursteil Open Data** veröffentlicht:
 
-Ausführliche Anleitungen dazu werden bald im Kursteil Open Data veröffentlicht:
 * Vorlesungsteil Open Data: https://learn.opengeoedu.de/opendata
 * Übungsteil Open Data: https://ilias.opengeoedu.de/ilias/goto_opengeoedu_crs_249.html
-
-
-der Übung 'OpenCaching' des Kursteils Open Data
 
 ## Software
 
