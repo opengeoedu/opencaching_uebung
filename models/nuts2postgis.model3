@@ -1,0 +1,353 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:filedownloader_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:filedownloader"/>
+      <Option type="QString" name="component_description" value="Datei herunterladen"/>
+      <Option type="double" name="component_pos_x" value="120"/>
+      <Option type="double" name="component_pos_y" value="316"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:filedownloader_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="URL">
+          <Option type="Map">
+            <Option type="QString" name="expression" value="'https://ec.europa.eu/eurostat/cache/GISCO/distribution/v2/nuts/'+@NUTS_Datenformat+'/NUTS_'+@rumlichertyprnbnlb+'_'+@auflsung+'_'+@jahr+'_'+@koordinatenreferenzsystemepsg+'_LEVL_'+@nutslevel+'.'+@NUTS_Datenformat"/>
+            <Option type="int" name="source" value="3"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:filter_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option type="Map" name="alg_config">
+        <Option type="List" name="outputs">
+          <Option type="Map">
+            <Option type="QString" name="expression" value="array_contains(string_to_array(@lnderauswahl), CNTR_CODE)"/>
+            <Option type="bool" name="isModelOutput" value="false"/>
+            <Option type="QString" name="name" value="NUTS_regionen"/>
+          </Option>
+        </Option>
+      </Option>
+      <Option type="QString" name="alg_id" value="native:filter"/>
+      <Option type="QString" name="component_description" value="Objektfilter"/>
+      <Option type="double" name="component_pos_x" value="410"/>
+      <Option type="double" name="component_pos_y" value="405"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:filter_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:filedownloader_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:fixgeometries_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:fixgeometries"/>
+      <Option type="QString" name="component_description" value="Geometrien reparieren"/>
+      <Option type="double" name="component_pos_x" value="417"/>
+      <Option type="double" name="component_pos_y" value="486"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:fixgeometries_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:filter_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT_NUTS_regionen"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:stringconcatenation_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:stringconcatenation"/>
+      <Option type="QString" name="component_description" value="db Tabellenname"/>
+      <Option type="double" name="component_pos_x" value="121"/>
+      <Option type="double" name="component_pos_y" value="533"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:stringconcatenation_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT_1">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="nuts_"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_2">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="nutslevel"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:importintopostgis_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:importintopostgis"/>
+      <Option type="QString" name="component_description" value="Nach PostgreSQL exportieren"/>
+      <Option type="double" name="component_pos_x" value="423"/>
+      <Option type="double" name="component_pos_y" value="656"/>
+      <Option type="StringList" name="dependencies">
+        <Option type="QString" value="qgis:postgisexecutesql_1"/>
+      </Option>
+      <Option type="QString" name="id" value="qgis:importintopostgis_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="CREATEINDEX">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="true"/>
+          </Option>
+        </Option>
+        <Option type="List" name="DATABASE">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="dbverbindungsname"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="DROP_STRING_LENGTH">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="false"/>
+          </Option>
+        </Option>
+        <Option type="List" name="ENCODING">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="UTF-8"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FORCE_SINGLEPART">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="false"/>
+          </Option>
+        </Option>
+        <Option type="List" name="GEOMETRY_COLUMN">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="geom"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:fixgeometries_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="LOWERCASE_NAMES">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="true"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OVERWRITE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="true"/>
+          </Option>
+        </Option>
+        <Option type="List" name="PRIMARY_KEY">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="invalid" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SCHEMA">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="dbschema"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="TABLENAME">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:stringconcatenation_1"/>
+            <Option type="QString" name="output_name" value="CONCATENATION"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:postgisexecutesql_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:postgisexecutesql"/>
+      <Option type="QString" name="component_description" value="CREATE schema if not exists"/>
+      <Option type="double" name="component_pos_x" value="425"/>
+      <Option type="double" name="component_pos_y" value="566"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="qgis:postgisexecutesql_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATABASE">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="dbverbindungsname"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SQL">
+          <Option type="Map">
+            <Option type="QString" name="expression" value="'CREATE SCHEMA IF NOT EXISTS '+ @dbschema+';'"/>
+            <Option type="int" name="source" value="3"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option type="Map" name="modelVariables">
+    <Option type="QString" name="NUTS_Datenformat" value="geojson"/>
+  </Option>
+  <Option type="QString" name="model_group" value="OpenGeoEdu"/>
+  <Option type="QString" name="model_name" value="NUTS/DACHLI nach postgis (API)"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="auflsung">
+      <Option type="QString" name="default" value="01M"/>
+      <Option type="QString" name="description" value="NUTS Auflösung"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="auflsung"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="dbschema">
+      <Option type="QString" name="default" value="eurostat"/>
+      <Option type="QString" name="description" value="db Schema"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="dbschema"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="dbverbindungsname">
+      <Option type="QString" name="default" value="db_opengeoedu"/>
+      <Option type="QString" name="description" value="db Verbindungsname"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="dbverbindungsname"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="jahr">
+      <Option type="QString" name="default" value="2016"/>
+      <Option type="QString" name="description" value="NUTS Jahr"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="jahr"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="koordinatenreferenzsystemepsg">
+      <Option type="QString" name="default" value="3035"/>
+      <Option type="QString" name="description" value="NUTS Koordinatenreferenzsystem (EPSG)"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="koordinatenreferenzsystemepsg"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="lnderauswahl">
+      <Option type="QString" name="default" value="LI,CH,DE,AT"/>
+      <Option type="QString" name="description" value="Länderauswahl"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="lnderauswahl"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="nutslevel">
+      <Option type="QString" name="default" value=""/>
+      <Option type="QString" name="description" value="NUTS Level"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="nutslevel"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+    <Option type="Map" name="rumlichertyprnbnlb">
+      <Option type="QString" name="default" value="RG"/>
+      <Option type="QString" name="description" value="NUTS Räumlicher Typ (RG / BN / LB)"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="bool" name="multiline" value="false"/>
+      <Option type="QString" name="name" value="rumlichertyprnbnlb"/>
+      <Option type="QString" name="parameter_type" value="string"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="auflsung">
+      <Option type="QString" name="component_description" value="auflsung"/>
+      <Option type="double" name="component_pos_x" value="111"/>
+      <Option type="double" name="component_pos_y" value="94"/>
+      <Option type="QString" name="name" value="auflsung"/>
+    </Option>
+    <Option type="Map" name="dbschema">
+      <Option type="QString" name="component_description" value="dbschema"/>
+      <Option type="double" name="component_pos_x" value="121"/>
+      <Option type="double" name="component_pos_y" value="589"/>
+      <Option type="QString" name="name" value="dbschema"/>
+    </Option>
+    <Option type="Map" name="dbverbindungsname">
+      <Option type="QString" name="component_description" value="dbverbindungsname"/>
+      <Option type="double" name="component_pos_x" value="120"/>
+      <Option type="double" name="component_pos_y" value="644"/>
+      <Option type="QString" name="name" value="dbverbindungsname"/>
+    </Option>
+    <Option type="Map" name="jahr">
+      <Option type="QString" name="component_description" value="jahr"/>
+      <Option type="double" name="component_pos_x" value="111"/>
+      <Option type="double" name="component_pos_y" value="137"/>
+      <Option type="QString" name="name" value="jahr"/>
+    </Option>
+    <Option type="Map" name="koordinatenreferenzsystemepsg">
+      <Option type="QString" name="component_description" value="koordinatenreferenzsystemepsg"/>
+      <Option type="double" name="component_pos_x" value="112"/>
+      <Option type="double" name="component_pos_y" value="180"/>
+      <Option type="QString" name="name" value="koordinatenreferenzsystemepsg"/>
+    </Option>
+    <Option type="Map" name="lnderauswahl">
+      <Option type="QString" name="component_description" value="lnderauswahl"/>
+      <Option type="double" name="component_pos_x" value="371"/>
+      <Option type="double" name="component_pos_y" value="231"/>
+      <Option type="QString" name="name" value="lnderauswahl"/>
+    </Option>
+    <Option type="Map" name="nutslevel">
+      <Option type="QString" name="component_description" value="nutslevel"/>
+      <Option type="double" name="component_pos_x" value="112"/>
+      <Option type="double" name="component_pos_y" value="222"/>
+      <Option type="QString" name="name" value="nutslevel"/>
+    </Option>
+    <Option type="Map" name="rumlichertyprnbnlb">
+      <Option type="QString" name="component_description" value="rumlichertyprnbnlb"/>
+      <Option type="double" name="component_pos_x" value="110"/>
+      <Option type="double" name="component_pos_y" value="52"/>
+      <Option type="QString" name="name" value="rumlichertyprnbnlb"/>
+    </Option>
+  </Option>
+</Option>
