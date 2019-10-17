@@ -26,7 +26,8 @@ Die hier enthaltenen Ressourcen wurden mit den folgenden Anwendungen entwickelt:
 Die einfachste Möglichkeit, die Processing-Skripte und Modelle in QGIS 3 einzubinden, ist es ist es, die Dateien der Ordner **"models"** und **"scripts"** in die gleichnamigen Verzeichnisse Ihres QGIS-Benutzerprofils zu verschieben und **QGIS dannach zu (neu-)zustarten**. Sie können diese Pfade unter `Einstellungen > Optionen > Reiter "Verarbeitung > "Modelle" bzw. "Skripte"` einsehen und anpassen. Für den Standardbenutzer "dafault" benutzt QGIS standardmäßig die folgenden Ordnerpfade:
 
 **Windows-Pfade:**
-[Ergänzen]
+* C:\User\NUTZERNAME\AppData\Roaming\QGIS\QGIS3\profiles\default\processing\models
+* C:\Users\NUTZERNAME\AppData\Roaming\QGIS\QGIS3\profiles\default\processing\scripts
 
 **Linux-Pfade:**
 * ~/.local/share/QGIS/QGIS3/profiles/default/processing/models
