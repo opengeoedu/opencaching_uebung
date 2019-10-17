@@ -31,14 +31,19 @@ Die einfachste Möglichkeit, die Processing-Scripte und Modelle in QGIS 3 einzub
 
 Für den Standardnutzer "dafault" benutzt QGIS standardmäßig die folgenden Standardpfade:
 
-**Windows-Pfad:**
+**Windows-Pfade:**
 [Ergänzen]
 
-**Linux-Pfad:**
-~/.local/share/QGIS/QGIS3/profiles/default/processing/models
-~/.local/share/QGIS/QGIS3/profiles/default/processing/scripts
+**Linux-Pfade:**
+* ~/.local/share/QGIS/QGIS3/profiles/default/processing/models
+* ~/.local/share/QGIS/QGIS3/profiles/default/processing/scripts
 
-Alternativ können Sie die Dateien auch einzeln aus der Werkzeugkiste heraus über die Optionen (Rechtsklick auf entsprechendes Symbol) `Modell / Skript zum Werkzeugkasten hinzufügen...` auswählen.
+Alternativ können Sie die Dateien auch einzeln aus der Werkzeugkasten ![Screenshot QGIS](documentation/images/werkzeugkasten_symbol.png)  heraus über die Optionen (Rechtsklick auf entsprechendes Symbol) 
+![Screenshot QGIS](documentation/images/modell_symbol.png) / ![Screenshot QGIS](documentation/images/skript_symbol.png)`Modell / Skript zum Werkzeugkasten hinzufügen...` auswählen.
 
 Weitere Informationen:
 https://docs.qgis.org/testing/en/docs/user_manual/processing/modeler.html#saving-and-loading-models
+
+Wenn die Werkzeuge richtig eingebunden haben, sollten die Skripte und Modelle im Werkzeugkasten jeweils in der Gruppe "OpenGeoEdu" erscheinen:
+
+![Screenshot QGIS](documentation/images/processingtools_eingebunden.png)
