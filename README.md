@@ -23,9 +23,7 @@ Die hier enthaltenen Ressourcen wurden mit den folgenden Anwendungen entwickelt:
 
 ## Verwendung der Processing-Werkzeuge mit QGIS 3
 
-Die einfachste Möglichkeit, die Processing-Skripte und Modelle in QGIS 3 einzubinden, ist es ist es, die Dateien der Ordner **"models"** und **"scripts"** in die gleichnamigen Verzeichnisse Ihres QGIS-Benutzerprofils zu verschieben und **QGIS dannach zu (neu-)zustarten**. Sie können diese Pfade unter `Einstellungen > Optionen > Reiter "Verarbeitung > "Modelle" bzw. "Skripte"` einsehen und Anpassen
-
-Für den Standardnutzer "dafault" benutzt QGIS standardmäßig die folgenden Standardpfade:
+Die einfachste Möglichkeit, die Processing-Skripte und Modelle in QGIS 3 einzubinden, ist es ist es, die Dateien der Ordner **"models"** und **"scripts"** in die gleichnamigen Verzeichnisse Ihres QGIS-Benutzerprofils zu verschieben und **QGIS dannach zu (neu-)zustarten**. Sie können diese Pfade unter `Einstellungen > Optionen > Reiter "Verarbeitung > "Modelle" bzw. "Skripte"` einsehen und anpassen. Für den Standardbenutzer "dafault" benutzt QGIS standardmäßig die folgenden Standardpfade:
 
 **Windows-Pfade:**
 [Ergänzen]
@@ -37,9 +35,10 @@ Für den Standardnutzer "dafault" benutzt QGIS standardmäßig die folgenden Sta
 Alternativ können Sie die Dateien auch einzeln aus der Werkzeugkasten ![Screenshot QGIS](documentation/images/werkzeugkasten_symbol.png)  heraus über die Optionen (Rechtsklick auf entsprechendes Symbol) 
 ![Screenshot QGIS](documentation/images/modell_symbol.png) / ![Screenshot QGIS](documentation/images/skript_symbol.png)`Modell / Skript zum Werkzeugkasten hinzufügen...` auswählen.
 
-Weitere Informationen:
-https://docs.qgis.org/testing/en/docs/user_manual/processing/modeler.html#saving-and-loading-models
-
 Wenn die Werkzeuge richtig eingebunden haben, sollten die Skripte und Modelle im Werkzeugkasten jeweils in der Gruppe "OpenGeoEdu" erscheinen:
 
 ![Screenshot QGIS](documentation/images/processingtools_eingebunden.png)
+
+
+Weitere Informationen zum Laden von QGIS-Processingwerkzeugen:
+https://docs.qgis.org/testing/en/docs/user_manual/processing/modeler.html#saving-and-loading-models
