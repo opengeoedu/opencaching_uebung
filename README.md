@@ -23,7 +23,7 @@ Die hier enthaltenen Ressourcen wurden mit den folgenden Anwendungen entwickelt:
 
 ## Verwendung der Processing-Werkzeuge mit QGIS 3
 
-Die einfachste Möglichkeit, die Processing-Skripte und Modelle in QGIS 3 einzubinden, ist es ist es, die Dateien der Ordner **"models"** und **"scripts"** in die gleichnamigen Verzeichnisse Ihres QGIS-Benutzerprofils zu verschieben und **QGIS dannach zu (neu-)zustarten**. Sie können diese Pfade unter `Einstellungen > Optionen > Reiter "Verarbeitung > "Modelle" bzw. "Skripte"` einsehen und anpassen. Für den Standardbenutzer "dafault" benutzt QGIS standardmäßig die folgenden Standardpfade:
+Die einfachste Möglichkeit, die Processing-Skripte und Modelle in QGIS 3 einzubinden, ist es ist es, die Dateien der Ordner **"models"** und **"scripts"** in die gleichnamigen Verzeichnisse Ihres QGIS-Benutzerprofils zu verschieben und **QGIS dannach zu (neu-)zustarten**. Sie können diese Pfade unter `Einstellungen > Optionen > Reiter "Verarbeitung > "Modelle" bzw. "Skripte"` einsehen und anpassen. Für den Standardbenutzer "dafault" benutzt QGIS standardmäßig die folgenden Ordnerpfade:
 
 **Windows-Pfade:**
 [Ergänzen]
