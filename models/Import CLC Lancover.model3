@@ -155,8 +155,8 @@
       <Option name="alg_config"/>
       <Option value="qgis:postgisexecutesql" type="QString" name="alg_id"/>
       <Option value="Erstelle SQL_SCHEMA" type="QString" name="component_description"/>
-      <Option value="459" type="double" name="component_pos_x"/>
-      <Option value="468" type="double" name="component_pos_y"/>
+      <Option value="457" type="double" name="component_pos_x"/>
+      <Option value="462" type="double" name="component_pos_y"/>
       <Option name="dependencies"/>
       <Option value="qgis:postgisexecutesql_1" type="QString" name="id"/>
       <Option name="outputs"/>
@@ -171,7 +171,7 @@
         </Option>
         <Option type="List" name="SQL">
           <Option type="Map">
-            <Option value="'CREATE SCHEMA IF NOT EXISTS'+ @dbschema +';'&#xa;" type="QString" name="expression"/>
+            <Option value="'CREATE SCHEMA IF NOT EXISTS '+ @dbschema +';'&#xa;" type="QString" name="expression"/>
             <Option value="3" type="int" name="source"/>
           </Option>
         </Option>
@@ -322,6 +322,16 @@
       <Option value="nutscountries" type="QString" name="name"/>
       <Option value="vector" type="QString" name="parameter_type"/>
     </Option>
+    <Option type="Map" name="pfadraster2postgis">
+      <Option value="0" type="int" name="behavior"/>
+      <Option type="invalid" name="default"/>
+      <Option value="pfad raster2postgis" type="QString" name="description"/>
+      <Option value="" type="QString" name="extension"/>
+      <Option value="8" type="int" name="flags"/>
+      <Option name="metadata"/>
+      <Option value="pfadraster2postgis" type="QString" name="name"/>
+      <Option value="file" type="QString" name="parameter_type"/>
+    </Option>
     <Option type="Map" name="schutzgebietetabellenname">
       <Option value="classes_en" type="QString" name="default"/>
       <Option value="db CLC Klassen" type="QString" name="description"/>
@@ -353,8 +363,8 @@
     </Option>
     <Option type="Map" name="dbschema">
       <Option value="dbschema" type="QString" name="component_description"/>
-      <Option value="186" type="double" name="component_pos_x"/>
-      <Option value="418" type="double" name="component_pos_y"/>
+      <Option value="173" type="double" name="component_pos_x"/>
+      <Option value="411" type="double" name="component_pos_y"/>
       <Option value="dbschema" type="QString" name="name"/>
     </Option>
     <Option type="Map" name="dbverbindungsname">
@@ -368,6 +378,12 @@
       <Option value="690" type="double" name="component_pos_x"/>
       <Option value="488" type="double" name="component_pos_y"/>
       <Option value="nutscountries" type="QString" name="name"/>
+    </Option>
+    <Option type="Map" name="pfadraster2postgis">
+      <Option value="pfadraster2postgis" type="QString" name="component_description"/>
+      <Option value="195" type="double" name="component_pos_x"/>
+      <Option value="301" type="double" name="component_pos_y"/>
+      <Option value="pfadraster2postgis" type="QString" name="name"/>
     </Option>
     <Option type="Map" name="schutzgebietetabellenname">
       <Option value="schutzgebietetabellenname" type="QString" name="component_description"/>
