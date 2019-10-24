@@ -27,7 +27,7 @@ def postgis_insert(DB_VERBINDUNGSNAME, db_table, db_entry, context, feedback):
 
 
 @alg(name='oc_parser', label='OKAPI JSON-Parser', group='opengeoedu', group_label='OpenGeoEdu')
-@alg.input(type=alg.FILE, name='DB_DUMP', label='Datenbanken-Abbild als ZIP-Archiv', default="/home/matthias/Dokumente/Geodata/Open Caching/okapi-dump-r4073611.tar.bz2")
+@alg.input(type=alg.FILE, name='DB_DUMP', label='Datenbanken-Abbild als ZIP-Archiv')
 @alg.input(type=alg.STRING, name='dbverbindungsname', label='Postgis-DB Verbindungsname', default="db_opengeoedu")
 @alg.input(type=alg.STRING, name='dbschema', label='db Schema', default="oc")
 @alg.input(type=alg.STRING, name='dbtabelle_caches', label='db Tabellenname für Caches', default="caches")
