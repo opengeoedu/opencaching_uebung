@@ -1,4 +1,5 @@
 import subprocess
+import os
 import tempfile
 from qgis.processing import alg
 from qgis.core import QgsRasterLayer, QgsSettings, QgsProcessingOutputRasterLayer
@@ -26,16 +27,23 @@ def raster2postgis(instance, parameters, context, feedback, inputs):
     DB_TABLENAME = instance.parameterAsString(parameters, 'dbtabelle', context)
     DB_SCHEMA = instance.parameterAsString(parameters, 'dbschema', context)
 
-    with tempfile.NamedTemporaryFile(mode="w+t", suffix=".sql") as tmp:
-        cmd_args = filter(None, [RASTER2PGSQL_PATH, RASTER2PGSQL_ARGUMENTS, RASTER_PATH, DB_SCHEMA + "." + DB_TABLENAME,
-                                 "> " + tmp.name])
+    with tempfile.NamedTemporaryFile(mode="w+t", suffix=".sql", delete=False) as tmp:
+        tmppath = tmp.name
+        tmp.close()
+        cmd_args = filter(None, ["\""+os.path.normpath(RASTER2PGSQL_PATH)+"\"", RASTER2PGSQL_ARGUMENTS, "\""+os.path.normpath(RASTER_PATH)+"\"", DB_SCHEMA + "." + DB_TABLENAME,
+                                #  "> \""+os.path.normpath("Y:\opendata\Übung\EigeneInhalte\Open Caching\out2.sql")+"\""])
+                                "> \""+os.path.normpath(tmppath)+"\""])
+        #cmd_args = filter(None, [os.path.normpath(RASTER2PGSQL_PATH), RASTER2PGSQL_ARGUMENTS, os.path.normpath(RASTER_PATH), DB_SCHEMA + "." + DB_TABLENAME,
+        #                         "> "+os.path.normpath(tmp.name)])
         cmd = " ".join(cmd_args)
         feedback.setProgressText("Führe raster2psql aus: \n\t" + cmd)
         MyOut = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
         stdout, stderr = MyOut.communicate()
         feedback.setProgressText(str(stdout))
         feedback.setProgressText(str(stderr))
-        sql_cmd = tmp.read()
+        f = open(tmppath, "r+t")
+        sql_cmd = f.read()
+        #sql_cmd = tmp.read()
         if not len(sql_cmd):
             raise processing.QgsProcessingException("raster2psql hat anscheinend keine SQL-Befehle generiert")
         feedback.setProgressText("SQL Befehle wurden generiert und werden an die Datenbank übermittelt.")
@@ -47,10 +55,15 @@ def raster2postgis(instance, parameters, context, feedback, inputs):
                            context=context,
                            feedback=feedback)
         except Exception as error:
-            raise processing.QgsProcessingException(
-                "Ein Fehler ist beim Senden der SQL-Anfrage aufgetreten: \n\t" + str(error))
+           feedback.setProgressText("Ein Fehler ist beim Senden der SQL-Anfrage aufgetreten")
+           raise error
+           #raise processing.QgsProcessingException("Ein Fehler ist beim Senden der SQL-Anfrage aufgetreten: \n\t" + str(error))
         finally:
-            tmp.close()
+            if 'tmp' in locals():
+                tmp.close()
+            if 'f' in locals():
+                f.close()
+            
         feedback.setProgressText("Rasterdaten wurden an die Datenbank übermittelt. Lade Layer.")
         if feedback.isCanceled():
             return {}

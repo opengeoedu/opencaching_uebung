@@ -266,34 +266,6 @@
         </Option>
       </Option>
     </Option>
-    <Option name="qgis:setstyleforrasterlayer_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
-      <Option name="alg_config"/>
-      <Option name="alg_id" value="qgis:setstyleforrasterlayer" type="QString"/>
-      <Option name="component_description" value="Setze Stil für Rasterlayer" type="QString"/>
-      <Option name="component_pos_x" value="572" type="double"/>
-      <Option name="component_pos_y" value="955" type="double"/>
-      <Option name="dependencies"/>
-      <Option name="id" value="qgis:setstyleforrasterlayer_1" type="QString"/>
-      <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="INPUT" type="List">
-          <Option type="Map">
-            <Option name="child_id" value="script:raster2postgis_1" type="QString"/>
-            <Option name="output_name" value="output" type="QString"/>
-            <Option name="source" value="1" type="int"/>
-          </Option>
-        </Option>
-        <Option name="STYLE" type="List">
-          <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="/home/matthias/Dokumente/Geodata/CORINE Landcover/OLD/clc2018_clc2018_v2018_20_raster100m/legend_stil.qml" type="QString"/>
-          </Option>
-        </Option>
-      </Option>
-    </Option>
     <Option name="script:raster2postgis_1" type="Map">
       <Option name="active" value="true" type="bool"/>
       <Option name="alg_config"/>
@@ -352,7 +324,7 @@
   <Option name="help"/>
   <Option name="modelVariables"/>
   <Option name="model_group" value="OpenGeoEdu" type="QString"/>
-  <Option name="model_name" value="Import CORINE Daten" type="QString"/>
+  <Option name="model_name" value="Import CORINE Daten (+ Stil)" type="QString"/>
   <Option name="parameterDefinitions" type="Map">
     <Option name="corinelandcoverrater" type="Map">
       <Option name="default" type="invalid"/>
