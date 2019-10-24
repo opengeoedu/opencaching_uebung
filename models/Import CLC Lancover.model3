@@ -1,83 +1,83 @@
 <!DOCTYPE model>
 <Option type="Map">
-  <Option type="Map" name="children">
-    <Option type="Map" name="gdal:cliprasterbymasklayer_1">
-      <Option value="true" type="bool" name="active"/>
+  <Option name="children" type="Map">
+    <Option name="gdal:cliprasterbymasklayer_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option value="gdal:cliprasterbymasklayer" type="QString" name="alg_id"/>
-      <Option value="Raster auf Layermaske zuschneiden" type="QString" name="component_description"/>
-      <Option value="628" type="double" name="component_pos_x"/>
-      <Option value="691" type="double" name="component_pos_y"/>
+      <Option name="alg_id" type="QString" value="gdal:cliprasterbymasklayer"/>
+      <Option name="component_description" type="QString" value="Raster auf Layermaske zuschneiden"/>
+      <Option name="component_pos_x" type="double" value="589"/>
+      <Option name="component_pos_y" type="double" value="619"/>
       <Option name="dependencies"/>
-      <Option value="gdal:cliprasterbymasklayer_1" type="QString" name="id"/>
+      <Option name="id" type="QString" value="gdal:cliprasterbymasklayer_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="ALPHA_BAND">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="ALPHA_BAND" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="false" type="bool" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="CROP_TO_CUTLINE">
+        <Option name="CROP_TO_CUTLINE" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="true" type="bool" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="true"/>
           </Option>
         </Option>
-        <Option type="List" name="DATA_TYPE">
+        <Option name="DATA_TYPE" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="0" type="int" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="INPUT">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option value="corinelandcoverrater" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="corinelandcoverrater"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="KEEP_RESOLUTION">
+        <Option name="KEEP_RESOLUTION" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="false" type="bool" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="MASK">
+        <Option name="MASK" type="List">
           <Option type="Map">
-            <Option value="nutscountries" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="nutscountries"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="MULTITHREADING">
+        <Option name="MULTITHREADING" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="false" type="bool" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="NODATA">
+        <Option name="NODATA" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option type="invalid" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
           </Option>
         </Option>
-        <Option type="List" name="OPTIONS">
+        <Option name="OPTIONS" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="" type="QString" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
           </Option>
         </Option>
-        <Option type="List" name="SET_RESOLUTION">
+        <Option name="SET_RESOLUTION" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="false" type="bool" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
           </Option>
         </Option>
-        <Option type="List" name="SOURCE_CRS">
+        <Option name="SOURCE_CRS" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option type="QgsCoordinateReferenceSystem" name="static_value">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
               <spatialrefsys>
                 <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
                 <srsid>1000</srsid>
@@ -91,10 +91,10 @@
             </Option>
           </Option>
         </Option>
-        <Option type="List" name="TARGET_CRS">
+        <Option name="TARGET_CRS" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option type="QgsCoordinateReferenceSystem" name="static_value">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
               <spatialrefsys>
                 <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
                 <srsid>1000</srsid>
@@ -108,153 +108,242 @@
             </Option>
           </Option>
         </Option>
-        <Option type="List" name="X_RESOLUTION">
+        <Option name="X_RESOLUTION" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option type="invalid" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
           </Option>
         </Option>
-        <Option type="List" name="Y_RESOLUTION">
+        <Option name="Y_RESOLUTION" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option type="invalid" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="native:loadlayer_1">
-      <Option value="true" type="bool" name="active"/>
+    <Option name="native:loadlayer_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option value="native:loadlayer" type="QString" name="alg_id"/>
-      <Option value="Layer in Projekt laden" type="QString" name="component_description"/>
-      <Option value="329" type="double" name="component_pos_x"/>
-      <Option value="918" type="double" name="component_pos_y"/>
+      <Option name="alg_id" type="QString" value="native:loadlayer"/>
+      <Option name="component_description" type="QString" value="Layer in Projekt laden"/>
+      <Option name="component_pos_x" type="double" value="564"/>
+      <Option name="component_pos_y" type="double" value="863"/>
       <Option name="dependencies"/>
-      <Option value="native:loadlayer_1" type="QString" name="id"/>
+      <Option name="id" type="QString" value="native:loadlayer_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="INPUT">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option value="script:raster2postgis_1" type="QString" name="child_id"/>
-            <Option value="output" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option name="child_id" type="QString" value="script:raster2postgis_1"/>
+            <Option name="output_name" type="QString" value="output"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="NAME">
+        <Option name="NAME" type="List">
           <Option type="Map">
-            <Option value="corinelandcovertabellenname" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="corinelandcovertabellenname"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="qgis:postgisexecutesql_1">
-      <Option value="true" type="bool" name="active"/>
+    <Option name="qgis:importintopostgis_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:postgisexecutesql" type="QString" name="alg_id"/>
-      <Option value="Erstelle SQL_SCHEMA" type="QString" name="component_description"/>
-      <Option value="459" type="double" name="component_pos_x"/>
-      <Option value="468" type="double" name="component_pos_y"/>
+      <Option name="alg_id" type="QString" value="qgis:importintopostgis"/>
+      <Option name="component_description" type="QString" value="Nach PostgreSQL exportieren"/>
+      <Option name="component_pos_x" type="double" value="242"/>
+      <Option name="component_pos_y" type="double" value="693"/>
+      <Option name="dependencies" type="StringList">
+        <Option type="QString" value="qgis:postgisexecutesql_1"/>
+      </Option>
+      <Option name="id" type="QString" value="qgis:importintopostgis_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="CREATEINDEX" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="DATABASE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="db_opengeoedu"/>
+          </Option>
+        </Option>
+        <Option name="DROP_STRING_LENGTH" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="ENCODING" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="UTF-8"/>
+          </Option>
+        </Option>
+        <Option name="FORCE_SINGLEPART" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="false"/>
+          </Option>
+        </Option>
+        <Option name="GEOMETRY_COLUMN" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="geom"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="corinelegendetabelle"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="LOWERCASE_NAMES" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="true"/>
+          </Option>
+        </Option>
+        <Option name="OVERWRITE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="bool" value="true"/>
+          </Option>
+        </Option>
+        <Option name="PRIMARY_KEY" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="SCHEMA" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="dbschema"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="TABLENAME" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="schutzgebietetabellenname"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:postgisexecutesql_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:postgisexecutesql"/>
+      <Option name="component_description" type="QString" value="Erstelle SQL_SCHEMA"/>
+      <Option name="component_pos_x" type="double" value="353"/>
+      <Option name="component_pos_y" type="double" value="611"/>
       <Option name="dependencies"/>
-      <Option value="qgis:postgisexecutesql_1" type="QString" name="id"/>
+      <Option name="id" type="QString" value="qgis:postgisexecutesql_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="DATABASE">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DATABASE" type="List">
           <Option type="Map">
-            <Option value="dbverbindungsname" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="dbverbindungsname"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="SQL">
+        <Option name="SQL" type="List">
           <Option type="Map">
-            <Option value="'CREATE SCHEMA IF NOT EXISTS'+ @dbschema +';'&#xa;" type="QString" name="expression"/>
-            <Option value="3" type="int" name="source"/>
+            <Option name="expression" type="QString" value="'CREATE SCHEMA IF NOT EXISTS '+ @dbschema +';'&#xa;"/>
+            <Option name="source" type="int" value="3"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="qgis:setstyleforrasterlayer_1">
-      <Option value="true" type="bool" name="active"/>
+    <Option name="qgis:setstyleforrasterlayer_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option value="qgis:setstyleforrasterlayer" type="QString" name="alg_id"/>
-      <Option value="Setze Stil für Rasterlayer" type="QString" name="component_description"/>
-      <Option value="611" type="double" name="component_pos_x"/>
-      <Option value="931" type="double" name="component_pos_y"/>
+      <Option name="alg_id" type="QString" value="qgis:setstyleforrasterlayer"/>
+      <Option name="component_description" type="QString" value="Setze Stil für Rasterlayer"/>
+      <Option name="component_pos_x" type="double" value="572"/>
+      <Option name="component_pos_y" type="double" value="955"/>
       <Option name="dependencies"/>
-      <Option value="qgis:setstyleforrasterlayer_1" type="QString" name="id"/>
+      <Option name="id" type="QString" value="qgis:setstyleforrasterlayer_1"/>
       <Option name="outputs"/>
-      <Option value="true" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="INPUT">
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
           <Option type="Map">
-            <Option value="script:raster2postgis_1" type="QString" name="child_id"/>
-            <Option value="output" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option name="child_id" type="QString" value="script:raster2postgis_1"/>
+            <Option name="output_name" type="QString" value="output"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="STYLE">
+        <Option name="STYLE" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="/home/matthias/Dokumente/Geodata/CORINE Landcover/clc2018_clc2018_v2018_20_raster100m/legend_stil.qml" type="QString" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="/home/matthias/Dokumente/Geodata/CORINE Landcover/OLD/clc2018_clc2018_v2018_20_raster100m/legend_stil.qml"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option type="Map" name="script:raster2postgis_1">
-      <Option value="true" type="bool" name="active"/>
+    <Option name="script:raster2postgis_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
       <Option name="alg_config"/>
-      <Option value="script:raster2postgis" type="QString" name="alg_id"/>
-      <Option value="Raster nach Postgis" type="QString" name="component_description"/>
-      <Option value="529" type="double" name="component_pos_x"/>
-      <Option value="773" type="double" name="component_pos_y"/>
-      <Option type="StringList" name="dependencies">
-        <Option value="qgis:postgisexecutesql_1" type="QString"/>
+      <Option name="alg_id" type="QString" value="script:raster2postgis"/>
+      <Option name="component_description" type="QString" value="Raster nach Postgis"/>
+      <Option name="component_pos_x" type="double" value="633"/>
+      <Option name="component_pos_y" type="double" value="762"/>
+      <Option name="dependencies" type="StringList">
+        <Option type="QString" value="qgis:postgisexecutesql_1"/>
       </Option>
-      <Option value="script:raster2postgis_1" type="QString" name="id"/>
+      <Option name="id" type="QString" value="script:raster2postgis_1"/>
       <Option name="outputs"/>
-      <Option value="false" type="bool" name="outputs_collapsed"/>
-      <Option value="true" type="bool" name="parameters_collapsed"/>
-      <Option type="Map" name="params">
-        <Option type="List" name="args">
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="args" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value=" " type="QString" name="static_value"/>
+            <Option name="parameter_name" type="QString" value="raster2postgisargumente"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="dbschema">
+        <Option name="dbschema" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="corine" type="QString" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="corine"/>
           </Option>
         </Option>
-        <Option type="List" name="dbtabelle">
+        <Option name="dbtabelle" type="List">
           <Option type="Map">
-            <Option value="corinelandcovertabellenname" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="corinelandcovertabellenname"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="dbverbindungsname">
+        <Option name="dbverbindungsname" type="List">
           <Option type="Map">
-            <Option value="dbverbindungsname" type="QString" name="parameter_name"/>
-            <Option value="0" type="int" name="source"/>
+            <Option name="parameter_name" type="QString" value="dbverbindungsname"/>
+            <Option name="source" type="int" value="0"/>
           </Option>
         </Option>
-        <Option type="List" name="raster">
+        <Option name="raster" type="List">
           <Option type="Map">
-            <Option value="gdal:cliprasterbymasklayer_1" type="QString" name="child_id"/>
-            <Option value="OUTPUT" type="QString" name="output_name"/>
-            <Option value="1" type="int" name="source"/>
+            <Option name="child_id" type="QString" value="gdal:cliprasterbymasklayer_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
           </Option>
         </Option>
-        <Option type="List" name="raster2psql">
+        <Option name="raster2psql" type="List">
           <Option type="Map">
-            <Option value="2" type="int" name="source"/>
-            <Option value="raster2pgsql" type="QString" name="static_value"/>
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="raster2pgsql"/>
           </Option>
         </Option>
       </Option>
@@ -262,118 +351,133 @@
   </Option>
   <Option name="help"/>
   <Option name="modelVariables"/>
-  <Option value="OpenGeoEdu" type="QString" name="model_group"/>
-  <Option value="Import CORINE Daten" type="QString" name="model_name"/>
-  <Option type="Map" name="parameterDefinitions">
-    <Option type="Map" name="corinelandcoverrater">
-      <Option type="invalid" name="default"/>
-      <Option value="CORINE Landcover-Raster" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+  <Option name="model_group" type="QString" value="OpenGeoEdu"/>
+  <Option name="model_name" type="QString" value="Import CORINE Daten"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="corinelandcoverrater" type="Map">
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="CORINE Landcover-Raster"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="corinelandcoverrater" type="QString" name="name"/>
-      <Option value="raster" type="QString" name="parameter_type"/>
+      <Option name="name" type="QString" value="corinelandcoverrater"/>
+      <Option name="parameter_type" type="QString" value="raster"/>
     </Option>
-    <Option type="Map" name="corinelandcovertabellenname">
-      <Option value="landcover2018" type="QString" name="default"/>
-      <Option value="db CLC Name" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+    <Option name="corinelandcovertabellenname" type="Map">
+      <Option name="default" type="QString" value="landcover2018"/>
+      <Option name="description" type="QString" value="db CLC Name"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="false" type="bool" name="multiline"/>
-      <Option value="corinelandcovertabellenname" type="QString" name="name"/>
-      <Option value="string" type="QString" name="parameter_type"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="corinelandcovertabellenname"/>
+      <Option name="parameter_type" type="QString" value="string"/>
     </Option>
-    <Option type="Map" name="corinelegendetabelle">
-      <Option type="List" name="data_types">
-        <Option value="5" type="int"/>
+    <Option name="corinelegendetabelle" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="5"/>
       </Option>
-      <Option type="invalid" name="default"/>
-      <Option value="Corine Nomenklatur (Tabelle)" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="Corine Nomenklatur (Tabelle)"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="corinelegendetabelle" type="QString" name="name"/>
-      <Option value="vector" type="QString" name="parameter_type"/>
+      <Option name="name" type="QString" value="corinelegendetabelle"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
     </Option>
-    <Option type="Map" name="dbschema">
-      <Option value="corine" type="QString" name="default"/>
-      <Option value="db Schema" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+    <Option name="dbschema" type="Map">
+      <Option name="default" type="QString" value="corine"/>
+      <Option name="description" type="QString" value="db Schema"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="false" type="bool" name="multiline"/>
-      <Option value="dbschema" type="QString" name="name"/>
-      <Option value="string" type="QString" name="parameter_type"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="dbschema"/>
+      <Option name="parameter_type" type="QString" value="string"/>
     </Option>
-    <Option type="Map" name="dbverbindungsname">
-      <Option value="db_opengeoedu" type="QString" name="default"/>
-      <Option value="DB_Verbindungsname" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+    <Option name="dbverbindungsname" type="Map">
+      <Option name="default" type="QString" value="db_opengeoedu"/>
+      <Option name="description" type="QString" value="db_Verbindungsname"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="false" type="bool" name="multiline"/>
-      <Option value="dbverbindungsname" type="QString" name="name"/>
-      <Option value="string" type="QString" name="parameter_type"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="dbverbindungsname"/>
+      <Option name="parameter_type" type="QString" value="string"/>
     </Option>
-    <Option type="Map" name="nutscountries">
-      <Option type="List" name="data_types">
-        <Option value="2" type="int"/>
+    <Option name="nutscountries" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="2"/>
       </Option>
-      <Option type="invalid" name="default"/>
-      <Option value="Vektorlayer (CLC-Maske)" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="Vektorlayer (CLC-Maske)"/>
+      <Option name="flags" type="int" value="0"/>
       <Option name="metadata"/>
-      <Option value="nutscountries" type="QString" name="name"/>
-      <Option value="vector" type="QString" name="parameter_type"/>
+      <Option name="name" type="QString" value="nutscountries"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
     </Option>
-    <Option type="Map" name="schutzgebietetabellenname">
-      <Option value="classes_en" type="QString" name="default"/>
-      <Option value="db CLC Klassen" type="QString" name="description"/>
-      <Option value="0" type="int" name="flags"/>
+    <Option name="raster2postgisargumente" type="Map">
+      <Option name="default" type="QString" value="-I -C -t 500x500"/>
+      <Option name="description" type="QString" value="raster2postgis-Argumente"/>
+      <Option name="flags" type="int" value="8"/>
       <Option name="metadata"/>
-      <Option value="false" type="bool" name="multiline"/>
-      <Option value="schutzgebietetabellenname" type="QString" name="name"/>
-      <Option value="string" type="QString" name="parameter_type"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="raster2postgisargumente"/>
+      <Option name="parameter_type" type="QString" value="string"/>
+    </Option>
+    <Option name="schutzgebietetabellenname" type="Map">
+      <Option name="default" type="QString" value="classes_en"/>
+      <Option name="description" type="QString" value="db CLC Klassen"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="multiline" type="bool" value="false"/>
+      <Option name="name" type="QString" value="schutzgebietetabellenname"/>
+      <Option name="parameter_type" type="QString" value="string"/>
     </Option>
   </Option>
-  <Option type="Map" name="parameters">
-    <Option type="Map" name="corinelandcoverrater">
-      <Option value="corinelandcoverrater" type="QString" name="component_description"/>
-      <Option value="597" type="double" name="component_pos_x"/>
-      <Option value="582" type="double" name="component_pos_y"/>
-      <Option value="corinelandcoverrater" type="QString" name="name"/>
+  <Option name="parameters" type="Map">
+    <Option name="corinelandcoverrater" type="Map">
+      <Option name="component_description" type="QString" value="corinelandcoverrater"/>
+      <Option name="component_pos_x" type="double" value="585"/>
+      <Option name="component_pos_y" type="double" value="484"/>
+      <Option name="name" type="QString" value="corinelandcoverrater"/>
     </Option>
-    <Option type="Map" name="corinelandcovertabellenname">
-      <Option value="corinelandcovertabellenname" type="QString" name="component_description"/>
-      <Option value="196" type="double" name="component_pos_x"/>
-      <Option value="768" type="double" name="component_pos_y"/>
-      <Option value="corinelandcovertabellenname" type="QString" name="name"/>
+    <Option name="corinelandcovertabellenname" type="Map">
+      <Option name="component_description" type="QString" value="corinelandcovertabellenname"/>
+      <Option name="component_pos_x" type="double" value="354"/>
+      <Option name="component_pos_y" type="double" value="771"/>
+      <Option name="name" type="QString" value="corinelandcovertabellenname"/>
     </Option>
-    <Option type="Map" name="corinelegendetabelle">
-      <Option value="corinelegendetabelle" type="QString" name="component_description"/>
-      <Option value="177" type="double" name="component_pos_x"/>
-      <Option value="549" type="double" name="component_pos_y"/>
-      <Option value="corinelegendetabelle" type="QString" name="name"/>
+    <Option name="corinelegendetabelle" type="Map">
+      <Option name="component_description" type="QString" value="corinelegendetabelle"/>
+      <Option name="component_pos_x" type="double" value="136"/>
+      <Option name="component_pos_y" type="double" value="485"/>
+      <Option name="name" type="QString" value="corinelegendetabelle"/>
     </Option>
-    <Option type="Map" name="dbschema">
-      <Option value="dbschema" type="QString" name="component_description"/>
-      <Option value="186" type="double" name="component_pos_x"/>
-      <Option value="418" type="double" name="component_pos_y"/>
-      <Option value="dbschema" type="QString" name="name"/>
+    <Option name="dbschema" type="Map">
+      <Option name="component_description" type="QString" value="dbschema"/>
+      <Option name="component_pos_x" type="double" value="355"/>
+      <Option name="component_pos_y" type="double" value="523"/>
+      <Option name="name" type="QString" value="dbschema"/>
     </Option>
-    <Option type="Map" name="dbverbindungsname">
-      <Option value="dbverbindungsname" type="QString" name="component_description"/>
-      <Option value="454" type="double" name="component_pos_x"/>
-      <Option value="219" type="double" name="component_pos_y"/>
-      <Option value="dbverbindungsname" type="QString" name="name"/>
+    <Option name="dbverbindungsname" type="Map">
+      <Option name="component_description" type="QString" value="dbverbindungsname"/>
+      <Option name="component_pos_x" type="double" value="360"/>
+      <Option name="component_pos_y" type="double" value="485"/>
+      <Option name="name" type="QString" value="dbverbindungsname"/>
     </Option>
-    <Option type="Map" name="nutscountries">
-      <Option value="nutscountries" type="QString" name="component_description"/>
-      <Option value="690" type="double" name="component_pos_x"/>
-      <Option value="488" type="double" name="component_pos_y"/>
-      <Option value="nutscountries" type="QString" name="name"/>
+    <Option name="nutscountries" type="Map">
+      <Option name="component_description" type="QString" value="nutscountries"/>
+      <Option name="component_pos_x" type="double" value="585"/>
+      <Option name="component_pos_y" type="double" value="526"/>
+      <Option name="name" type="QString" value="nutscountries"/>
     </Option>
-    <Option type="Map" name="schutzgebietetabellenname">
-      <Option value="schutzgebietetabellenname" type="QString" name="component_description"/>
-      <Option value="191" type="double" name="component_pos_x"/>
-      <Option value="670" type="double" name="component_pos_y"/>
-      <Option value="schutzgebietetabellenname" type="QString" name="name"/>
+    <Option name="raster2postgisargumente" type="Map">
+      <Option name="component_description" type="QString" value="raster2postgisargumente"/>
+      <Option name="component_pos_x" type="double" value="709"/>
+      <Option name="component_pos_y" type="double" value="698"/>
+      <Option name="name" type="QString" value="raster2postgisargumente"/>
+    </Option>
+    <Option name="schutzgebietetabellenname" type="Map">
+      <Option name="component_description" type="QString" value="schutzgebietetabellenname"/>
+      <Option name="component_pos_x" type="double" value="136"/>
+      <Option name="component_pos_y" type="double" value="530"/>
+      <Option name="name" type="QString" value="schutzgebietetabellenname"/>
     </Option>
   </Option>
 </Option>
