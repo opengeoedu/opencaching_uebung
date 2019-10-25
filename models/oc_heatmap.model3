@@ -1,0 +1,197 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="native:reprojectlayer_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="native:reprojectlayer"/>
+      <Option name="component_description" type="QString" value="Layer reprojizieren"/>
+      <Option name="component_pos_x" type="double" value="281"/>
+      <Option name="component_pos_y" type="double" value="139"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="native:reprojectlayer_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="cacheslocations"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_CRS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QgsCoordinateReferenceSystem">
+              <spatialrefsys>
+                <proj4>+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+                <srsid>1000</srsid>
+                <srid>3035</srid>
+                <authid>EPSG:3035</authid>
+                <description>ETRS89 / LAEA Europe</description>
+                <projectionacronym>laea</projectionacronym>
+                <ellipsoidacronym>GRS80</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+              </spatialrefsys>
+            </Option>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:heatmapkerneldensityestimation_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:heatmapkerneldensityestimation"/>
+      <Option name="component_description" type="QString" value="Heatmap (Kerndichtenschätzung)"/>
+      <Option name="component_pos_x" type="double" value="492"/>
+      <Option name="component_pos_y" type="double" value="243"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:heatmapkerneldensityestimation_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="Geocaching_heatmap" type="Map">
+          <Option name="child_id" type="QString" value="qgis:heatmapkerneldensityestimation_1"/>
+          <Option name="component_description" type="QString" value="Geocaching_heatmap"/>
+          <Option name="component_pos_x" type="double" value="415"/>
+          <Option name="component_pos_y" type="double" value="405"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" type="bool" value="false"/>
+          <Option name="name" type="QString" value="Geocaching_heatmap"/>
+          <Option name="output_name" type="QString" value="OUTPUT"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DECAY" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="0"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="native:reprojectlayer_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="KERNEL" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="OUTPUT_VALUE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="PIXEL_SIZE" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="2000"/>
+          </Option>
+        </Option>
+        <Option name="RADIUS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="double" value="15000"/>
+          </Option>
+        </Option>
+        <Option name="RADIUS_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="WEIGHT_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:setstyleforrasterlayer_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:setstyleforrasterlayer"/>
+      <Option name="component_description" type="QString" value="Setze Stil für Rasterlayer"/>
+      <Option name="component_pos_x" type="double" value="645.25"/>
+      <Option name="component_pos_y" type="double" value="408.75"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:setstyleforrasterlayer_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="false"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="qgis:heatmapkerneldensityestimation_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="STYLE" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="heatmapstyle"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="modelVariables"/>
+  <Option name="model_group" type="QString" value="OpenGeoEdu"/>
+  <Option name="model_name" type="QString" value="Visualisierung Heatmap"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="cacheslocations" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="caches_locations"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="cacheslocations"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="heatmapstyle" type="Map">
+      <Option name="behavior" type="int" value="0"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="Heatmap Style (*.qml)"/>
+      <Option name="extension" type="QString" value=""/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="heatmapstyle"/>
+      <Option name="parameter_type" type="QString" value="file"/>
+    </Option>
+    <Option name="qgis:heatmapkerneldensityestimation_1:Geocaching_heatmap" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="Geocaching_heatmap"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="qgis:heatmapkerneldensityestimation_1:Geocaching_heatmap"/>
+      <Option name="parameter_type" type="QString" value="rasterDestination"/>
+      <Option name="supports_non_file_outputs" type="bool" value="true"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="cacheslocations" type="Map">
+      <Option name="component_description" type="QString" value="cacheslocations"/>
+      <Option name="component_pos_x" type="double" value="120"/>
+      <Option name="component_pos_y" type="double" value="60"/>
+      <Option name="name" type="QString" value="cacheslocations"/>
+    </Option>
+    <Option name="heatmapstyle" type="Map">
+      <Option name="component_description" type="QString" value="heatmapstyle"/>
+      <Option name="component_pos_x" type="double" value="753"/>
+      <Option name="component_pos_y" type="double" value="266"/>
+      <Option name="name" type="QString" value="heatmapstyle"/>
+    </Option>
+  </Option>
+</Option>

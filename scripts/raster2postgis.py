@@ -1,5 +1,6 @@
 import subprocess
 import os
+import platform
 import tempfile
 from qgis.processing import alg
 from qgis.core import QgsRasterLayer, QgsSettings, QgsProcessingOutputRasterLayer
@@ -21,7 +22,11 @@ def raster2postgis(instance, parameters, context, feedback, inputs):
     """
 
     RASTER_PATH = instance.parameterAsFileOutput(parameters, 'raster', context)
+    RASTER_PATH = '"'+os.path.normpath(RASTER_PATH)+'"'
     RASTER2PGSQL_PATH = instance.parameterAsFileOutput(parameters, 'raster2psql', context)
+    RASTER2PGSQL_PATH = os.path.normpath(RASTER2PGSQL_PATH)
+    if platform.system() == 'Windows' and "\\" in RASTER2PGSQL_PATH:
+        RASTER2PGSQL_PATH = '"'+RASTER2PGSQL_PATH+'"'
     RASTER2PGSQL_ARGUMENTS = instance.parameterAsFileOutput(parameters, 'args', context)
     DB_VERBINDUNGSNAME = instance.parameterAsString(parameters, 'dbverbindungsname', context)
     DB_TABLENAME = instance.parameterAsString(parameters, 'dbtabelle', context)
@@ -30,7 +35,7 @@ def raster2postgis(instance, parameters, context, feedback, inputs):
     with tempfile.NamedTemporaryFile(mode="w+t", suffix=".sql", delete=False) as tmp:
         tmppath = tmp.name
         tmp.close()
-        cmd_args = filter(None, ["\""+os.path.normpath(RASTER2PGSQL_PATH)+"\"", RASTER2PGSQL_ARGUMENTS, "\""+os.path.normpath(RASTER_PATH)+"\"", DB_SCHEMA + "." + DB_TABLENAME,
+        cmd_args = filter(None, [RASTER2PGSQL_PATH, RASTER2PGSQL_ARGUMENTS, RASTER_PATH, DB_SCHEMA + "." + DB_TABLENAME,
                                 #  "> \""+os.path.normpath("Y:\opendata\Übung\EigeneInhalte\Open Caching\out2.sql")+"\""])
                                 "> \""+os.path.normpath(tmppath)+"\""])
         #cmd_args = filter(None, [os.path.normpath(RASTER2PGSQL_PATH), RASTER2PGSQL_ARGUMENTS, os.path.normpath(RASTER_PATH), DB_SCHEMA + "." + DB_TABLENAME,
@@ -63,6 +68,7 @@ def raster2postgis(instance, parameters, context, feedback, inputs):
                 tmp.close()
             if 'f' in locals():
                 f.close()
+            os.unlink(tmppath)
             
         feedback.setProgressText("Rasterdaten wurden an die Datenbank übermittelt. Lade Layer.")
         if feedback.isCanceled():
