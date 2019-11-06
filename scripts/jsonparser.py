@@ -30,8 +30,8 @@ def postgis_insert(DB_VERBINDUNGSNAME, db_table, db_entry, context, feedback):
 @alg.input(type=alg.FILE, name='DB_DUMP', label='Datenbanken-Abbild als ZIP-Archiv')
 @alg.input(type=alg.STRING, name='dbverbindungsname', label='Postgis-DB Verbindungsname', default="db_opengeoedu")
 @alg.input(type=alg.STRING, name='dbschema', label='db Schema', default="oc")
-@alg.input(type=alg.STRING, name='dbtabelle_caches', label='db Tabellenname für Caches', default="caches")
-@alg.input(type=alg.STRING, name='dbtabelle_protection', label='db Tabellenname für Schutzgebiete', default="protection_areas")
+@alg.input(type=alg.STRING, name='dbtabelle_caches', label='db Tabellenname für Caches', default="geocaches")
+@alg.input(type=alg.STRING, name='dbtabelle_protection', label='db Tabellenname für Schutzgebiete', default="schutzgebiete")
 @alg.output(type=alg.NUMBER, name='status', label='Status Code')
 
 
@@ -86,10 +86,10 @@ def oc_parser(instance, parameters, context, feedback, inputs):
                              "no_protection_areas": str(no_protection_areas),
                              "difficulty": str(oc_data[i]['data']['difficulty']).replace("None","NULL"),
                              "terrain": str(oc_data[i]['data']['terrain']).replace("None","NULL"),
-                             "rating": str(oc_data[i]['data']['rating']).replace("None","NULL"),
                              "recommendations": str(oc_data[i]['data']['recommendations']),
                              "url": oc_data[i]['data']['url'].replace("'", "''"),
                              "country": oc_data[i]['data']['country'].replace("'","''"),
+                             "country2": oc_data[i]['data']['country'].replace("'","''"),
                              "state": oc_data[i]['data']['state'].replace("'","''")}
 
                     postgis_insert(DB_VERBINDUNGSNAME, DB_SCHEMA+"."+DB_TABLENAME_CACHES, cache, context, feedback)

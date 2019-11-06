@@ -1,117 +1,117 @@
 <!DOCTYPE model>
 <Option type="Map">
-  <Option name="children" type="Map">
-    <Option name="qgis:postgisexecuteandloadsql_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
+  <Option type="Map" name="children">
+    <Option type="Map" name="qgis:postgisexecuteandloadsql_1">
+      <Option value="true" type="bool" name="active"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="qgis:postgisexecuteandloadsql" type="QString"/>
-      <Option name="component_description" value="Caches-Layer laden" type="QString"/>
-      <Option name="component_pos_x" value="399" type="double"/>
-      <Option name="component_pos_y" value="602" type="double"/>
-      <Option name="dependencies" type="StringList">
+      <Option value="qgis:postgisexecuteandloadsql" type="QString" name="alg_id"/>
+      <Option value="Caches-Layer laden" type="QString" name="component_description"/>
+      <Option value="399" type="double" name="component_pos_x"/>
+      <Option value="602" type="double" name="component_pos_y"/>
+      <Option type="StringList" name="dependencies">
         <Option value="script:oc_parser_1" type="QString"/>
       </Option>
-      <Option name="id" value="qgis:postgisexecuteandloadsql_1" type="QString"/>
+      <Option value="qgis:postgisexecuteandloadsql_1" type="QString" name="id"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="DATABASE" type="List">
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATABASE">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="db_opengeoedu" type="QString"/>
+            <Option value="2" type="int" name="source"/>
+            <Option value="db_opengeoedu" type="QString" name="static_value"/>
           </Option>
         </Option>
-        <Option name="GEOMETRY_FIELD" type="List">
+        <Option type="List" name="GEOMETRY_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="location" type="QString"/>
+            <Option value="2" type="int" name="source"/>
+            <Option value="location" type="QString" name="static_value"/>
           </Option>
         </Option>
-        <Option name="ID_FIELD" type="List">
+        <Option type="List" name="ID_FIELD">
           <Option type="Map">
-            <Option name="source" value="2" type="int"/>
-            <Option name="static_value" value="id" type="QString"/>
+            <Option value="2" type="int" name="source"/>
+            <Option value="id" type="QString" name="static_value"/>
           </Option>
         </Option>
-        <Option name="SQL" type="List">
+        <Option type="List" name="SQL">
           <Option type="Map">
-            <Option name="expression" value="'select * from '+@schema+'.'+@cachestabellenname+';'" type="QString"/>
-            <Option name="source" value="3" type="int"/>
+            <Option value="'select * from '+@schema+'.'+@cachestabellenname+';'" type="QString" name="expression"/>
+            <Option value="3" type="int" name="source"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="qgis:postgisexecutesql_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="qgis:postgisexecutesql_1">
+      <Option value="true" type="bool" name="active"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="qgis:postgisexecutesql" type="QString"/>
-      <Option name="component_description" value="Erstelle Postgis-Tabellen" type="QString"/>
-      <Option name="component_pos_x" value="389" type="double"/>
-      <Option name="component_pos_y" value="374" type="double"/>
+      <Option value="qgis:postgisexecutesql" type="QString" name="alg_id"/>
+      <Option value="Erstelle Postgis-Tabellen" type="QString" name="component_description"/>
+      <Option value="389" type="double" name="component_pos_x"/>
+      <Option value="374" type="double" name="component_pos_y"/>
       <Option name="dependencies"/>
-      <Option name="id" value="qgis:postgisexecutesql_1" type="QString"/>
+      <Option value="qgis:postgisexecutesql_1" type="QString" name="id"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="true" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="DATABASE" type="List">
+      <Option value="true" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATABASE">
           <Option type="Map">
-            <Option name="parameter_name" value="dbverbindungsname" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="dbverbindungsname" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
-        <Option name="SQL" type="List">
+        <Option type="List" name="SQL">
           <Option type="Map">
-            <Option name="expression" value="'CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#xa;CREATE SCHEMA IF NOT EXISTS '+@schema+';&#xa;CREATE TABLE '+@schema+'.'+@cachestabellenname+' (&#xa;    id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),&#xa;    code VARCHAR(64) UNIQUE,&#xa;    name VARCHAR(64),&#xa;    type VARCHAR(64),&#xa;    country VARCHAR(64),&#xa;    state VARCHAR(64),&#xa;    url VARCHAR(64),&#xa;    founds integer,&#xa;    difficulty real,&#xa;    terrain real,&#xa;    rating real,&#xa;    recommendations integer,&#xa;    no_protection_areas integer,&#xa;    location GEOGRAPHY(POINT,4326)&#xa;  );&#xa;CREATE TABLE '+@schema+'.'+@schutzgebietetabellenname+' (&#xa;    id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),&#xa;    cache_id uuid REFERENCES ' +@schema+'.'+@cachestabellenname+' (id) ,&#xa;    name VARCHAR(250),&#xa;    type VARCHAR(64)&#xa;  );'&#xa;" type="QString"/>
-            <Option name="source" value="3" type="int"/>
+            <Option value="'CREATE EXTENSION IF NOT EXISTS &quot;uuid-ossp&quot;;&#xd;&#xa;CREATE SCHEMA IF NOT EXISTS '+@schema+';&#xd;&#xa;CREATE TABLE '+@schema+'.'+@cachestabellenname+' (&#xd;&#xa;    id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),&#xd;&#xa;    code VARCHAR(64) UNIQUE,&#xd;&#xa;    name VARCHAR(64),&#xd;&#xa;    type VARCHAR(64),&#xd;&#xa;    country VARCHAR(64),&#xd;&#xa;&#x9;country2 VARCHAR(64),&#xd;&#xa;    state VARCHAR(64),&#xd;&#xa;    url VARCHAR(64),&#xd;&#xa;    founds integer,&#xd;&#xa;    difficulty real,&#xd;&#xa;    terrain real,&#xd;&#xa;    recommendations integer,&#xd;&#xa;    no_protection_areas integer,&#xd;&#xa;    location GEOGRAPHY(POINT,4326)&#xd;&#xa;  );&#xd;&#xa;CREATE TABLE '+@schema+'.'+@schutzgebietetabellenname+' (&#xd;&#xa;    id uuid PRIMARY KEY DEFAULT uuid_generate_v4(),&#xd;&#xa;    cache_id uuid REFERENCES ' +@schema+'.'+@cachestabellenname+' (id) ,&#xd;&#xa;    name VARCHAR(250),&#xd;&#xa;    type VARCHAR(64)&#xd;&#xa;  );'&#xd;&#xa;" type="QString" name="expression"/>
+            <Option value="3" type="int" name="source"/>
           </Option>
         </Option>
       </Option>
     </Option>
-    <Option name="script:oc_parser_1" type="Map">
-      <Option name="active" value="true" type="bool"/>
+    <Option type="Map" name="script:oc_parser_1">
+      <Option value="true" type="bool" name="active"/>
       <Option name="alg_config"/>
-      <Option name="alg_id" value="script:oc_parser" type="QString"/>
-      <Option name="component_description" value="OKAPI JSON-Parser" type="QString"/>
-      <Option name="component_pos_x" value="394" type="double"/>
-      <Option name="component_pos_y" value="477" type="double"/>
-      <Option name="dependencies" type="StringList">
+      <Option value="script:oc_parser" type="QString" name="alg_id"/>
+      <Option value="OKAPI JSON-Parser" type="QString" name="component_description"/>
+      <Option value="394" type="double" name="component_pos_x"/>
+      <Option value="477" type="double" name="component_pos_y"/>
+      <Option type="StringList" name="dependencies">
         <Option value="qgis:postgisexecutesql_1" type="QString"/>
       </Option>
-      <Option name="id" value="script:oc_parser_1" type="QString"/>
+      <Option value="script:oc_parser_1" type="QString" name="id"/>
       <Option name="outputs"/>
-      <Option name="outputs_collapsed" value="false" type="bool"/>
-      <Option name="parameters_collapsed" value="true" type="bool"/>
-      <Option name="params" type="Map">
-        <Option name="DB_DUMP" type="List">
+      <Option value="false" type="bool" name="outputs_collapsed"/>
+      <Option value="true" type="bool" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DB_DUMP">
           <Option type="Map">
-            <Option name="parameter_name" value="datenbankenabbildtararchiv" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="datenbankenabbildtararchiv" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
-        <Option name="dbschema" type="List">
+        <Option type="List" name="dbschema">
           <Option type="Map">
-            <Option name="parameter_name" value="schema" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="schema" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
-        <Option name="dbtabelle_caches" type="List">
+        <Option type="List" name="dbtabelle_caches">
           <Option type="Map">
-            <Option name="parameter_name" value="cachestabellenname" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="cachestabellenname" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
-        <Option name="dbtabelle_protection" type="List">
+        <Option type="List" name="dbtabelle_protection">
           <Option type="Map">
-            <Option name="parameter_name" value="schutzgebietetabellenname" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="schutzgebietetabellenname" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
-        <Option name="dbverbindungsname" type="List">
+        <Option type="List" name="dbverbindungsname">
           <Option type="Map">
-            <Option name="parameter_name" value="dbverbindungsname" type="QString"/>
-            <Option name="source" value="0" type="int"/>
+            <Option value="dbverbindungsname" type="QString" name="parameter_name"/>
+            <Option value="0" type="int" name="source"/>
           </Option>
         </Option>
       </Option>
@@ -119,86 +119,87 @@
   </Option>
   <Option name="help"/>
   <Option name="modelVariables"/>
-  <Option name="model_group" value="OpenGeoEdu" type="QString"/>
-  <Option name="model_name" value="Import Opencaching DB (offline)" type="QString"/>
-  <Option name="parameterDefinitions" type="Map">
-    <Option name="cachestabellenname" type="Map">
-      <Option name="default" value="geocaches" type="QString"/>
-      <Option name="description" value="Caches Tabellenname" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+  <Option value="OpenGeoEdu" type="QString" name="model_group"/>
+  <Option value="Import Opencaching DB (offline)" type="QString" name="model_name"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="cachestabellenname">
+      <Option value="geocaches" type="QString" name="default"/>
+      <Option value="Caches Tabellenname" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
       <Option name="metadata"/>
-      <Option name="multiline" value="false" type="bool"/>
-      <Option name="name" value="cachestabellenname" type="QString"/>
-      <Option name="parameter_type" value="string" type="QString"/>
+      <Option value="false" type="bool" name="multiline"/>
+      <Option value="cachestabellenname" type="QString" name="name"/>
+      <Option value="string" type="QString" name="parameter_type"/>
     </Option>
-    <Option name="datenbankenabbildtararchiv" type="Map">
-      <Option name="behavior" value="0" type="int"/>
-      <Option name="default" type="invalid"/>
-      <Option name="description" value="Datenbankenabbild (tar -Archiv)" type="QString"/>
-      <Option name="extension" value="" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+    <Option type="Map" name="datenbankenabbildtararchiv">
+      <Option value="0" type="int" name="behavior"/>
+      <Option type="invalid" name="default"/>
+      <Option value="Datenbankenabbild (tar -Archiv)" type="QString" name="description"/>
+      <Option value="" type="QString" name="extension"/>
+      <Option value="" type="QString" name="filefilter"/>
+      <Option value="0" type="int" name="flags"/>
       <Option name="metadata"/>
-      <Option name="name" value="datenbankenabbildtararchiv" type="QString"/>
-      <Option name="parameter_type" value="file" type="QString"/>
+      <Option value="datenbankenabbildtararchiv" type="QString" name="name"/>
+      <Option value="file" type="QString" name="parameter_type"/>
     </Option>
-    <Option name="dbverbindungsname" type="Map">
-      <Option name="default" value="db_opengeoedu" type="QString"/>
-      <Option name="description" value="DB_Verbindungsname" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+    <Option type="Map" name="dbverbindungsname">
+      <Option value="db_opengeoedu" type="QString" name="default"/>
+      <Option value="DB_Verbindungsname" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
       <Option name="metadata"/>
-      <Option name="multiline" value="false" type="bool"/>
-      <Option name="name" value="dbverbindungsname" type="QString"/>
-      <Option name="parameter_type" value="string" type="QString"/>
+      <Option value="false" type="bool" name="multiline"/>
+      <Option value="dbverbindungsname" type="QString" name="name"/>
+      <Option value="string" type="QString" name="parameter_type"/>
     </Option>
-    <Option name="schema" type="Map">
-      <Option name="default" value="oc" type="QString"/>
-      <Option name="description" value="Schema" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+    <Option type="Map" name="schema">
+      <Option value="oc" type="QString" name="default"/>
+      <Option value="Schema" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
       <Option name="metadata"/>
-      <Option name="multiline" value="false" type="bool"/>
-      <Option name="name" value="schema" type="QString"/>
-      <Option name="parameter_type" value="string" type="QString"/>
+      <Option value="false" type="bool" name="multiline"/>
+      <Option value="schema" type="QString" name="name"/>
+      <Option value="string" type="QString" name="parameter_type"/>
     </Option>
-    <Option name="schutzgebietetabellenname" type="Map">
-      <Option name="default" value="schutzgebiete" type="QString"/>
-      <Option name="description" value="Schutzgebiete Tabellenname" type="QString"/>
-      <Option name="flags" value="0" type="int"/>
+    <Option type="Map" name="schutzgebietetabellenname">
+      <Option value="schutzgebiete" type="QString" name="default"/>
+      <Option value="Schutzgebiete Tabellenname" type="QString" name="description"/>
+      <Option value="0" type="int" name="flags"/>
       <Option name="metadata"/>
-      <Option name="multiline" value="false" type="bool"/>
-      <Option name="name" value="schutzgebietetabellenname" type="QString"/>
-      <Option name="parameter_type" value="string" type="QString"/>
+      <Option value="false" type="bool" name="multiline"/>
+      <Option value="schutzgebietetabellenname" type="QString" name="name"/>
+      <Option value="string" type="QString" name="parameter_type"/>
     </Option>
   </Option>
-  <Option name="parameters" type="Map">
-    <Option name="cachestabellenname" type="Map">
-      <Option name="component_description" value="cachestabellenname" type="QString"/>
-      <Option name="component_pos_x" value="111" type="double"/>
-      <Option name="component_pos_y" value="321" type="double"/>
-      <Option name="name" value="cachestabellenname" type="QString"/>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="cachestabellenname">
+      <Option value="cachestabellenname" type="QString" name="component_description"/>
+      <Option value="111" type="double" name="component_pos_x"/>
+      <Option value="321" type="double" name="component_pos_y"/>
+      <Option value="cachestabellenname" type="QString" name="name"/>
     </Option>
-    <Option name="datenbankenabbildtararchiv" type="Map">
-      <Option name="component_description" value="datenbankenabbildtararchiv" type="QString"/>
-      <Option name="component_pos_x" value="377" type="double"/>
-      <Option name="component_pos_y" value="237" type="double"/>
-      <Option name="name" value="datenbankenabbildtararchiv" type="QString"/>
+    <Option type="Map" name="datenbankenabbildtararchiv">
+      <Option value="datenbankenabbildtararchiv" type="QString" name="component_description"/>
+      <Option value="377" type="double" name="component_pos_x"/>
+      <Option value="237" type="double" name="component_pos_y"/>
+      <Option value="datenbankenabbildtararchiv" type="QString" name="name"/>
     </Option>
-    <Option name="dbverbindungsname" type="Map">
-      <Option name="component_description" value="dbverbindungsname" type="QString"/>
-      <Option name="component_pos_x" value="119" type="double"/>
-      <Option name="component_pos_y" value="464" type="double"/>
-      <Option name="name" value="dbverbindungsname" type="QString"/>
+    <Option type="Map" name="dbverbindungsname">
+      <Option value="dbverbindungsname" type="QString" name="component_description"/>
+      <Option value="119" type="double" name="component_pos_x"/>
+      <Option value="464" type="double" name="component_pos_y"/>
+      <Option value="dbverbindungsname" type="QString" name="name"/>
     </Option>
-    <Option name="schema" type="Map">
-      <Option name="component_description" value="schema" type="QString"/>
-      <Option name="component_pos_x" value="117" type="double"/>
-      <Option name="component_pos_y" value="419" type="double"/>
-      <Option name="name" value="schema" type="QString"/>
+    <Option type="Map" name="schema">
+      <Option value="schema" type="QString" name="component_description"/>
+      <Option value="117" type="double" name="component_pos_x"/>
+      <Option value="419" type="double" name="component_pos_y"/>
+      <Option value="schema" type="QString" name="name"/>
     </Option>
-    <Option name="schutzgebietetabellenname" type="Map">
-      <Option name="component_description" value="schutzgebietetabellenname" type="QString"/>
-      <Option name="component_pos_x" value="115" type="double"/>
-      <Option name="component_pos_y" value="371" type="double"/>
-      <Option name="name" value="schutzgebietetabellenname" type="QString"/>
+    <Option type="Map" name="schutzgebietetabellenname">
+      <Option value="schutzgebietetabellenname" type="QString" name="component_description"/>
+      <Option value="115" type="double" name="component_pos_x"/>
+      <Option value="371" type="double" name="component_pos_y"/>
+      <Option value="schutzgebietetabellenname" type="QString" name="name"/>
     </Option>
   </Option>
 </Option>
