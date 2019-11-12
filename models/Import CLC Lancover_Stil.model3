@@ -356,7 +356,7 @@
   <Option name="parameterDefinitions" type="Map">
     <Option name="corinelandcoverrater" type="Map">
       <Option name="default" type="invalid"/>
-      <Option name="description" value="Landcover-Raster" type="QString"/>
+      <Option name="description" value="CORINE Land Cover-Raster" type="QString"/>
       <Option name="flags" value="0" type="int"/>
       <Option name="metadata"/>
       <Option name="name" value="corinelandcoverrater" type="QString"/>
@@ -364,7 +364,7 @@
     </Option>
     <Option name="corinelandcovertabellenname" type="Map">
       <Option name="default" value="landcover2018" type="QString"/>
-      <Option name="description" value="db Tabellenname Landcover" type="QString"/>
+      <Option name="description" value="db Tabellenname CORINE Land Cover" type="QString"/>
       <Option name="flags" value="0" type="int"/>
       <Option name="metadata"/>
       <Option name="multiline" value="false" type="bool"/>
@@ -376,7 +376,7 @@
         <Option value="5" type="int"/>
       </Option>
       <Option name="default" type="invalid"/>
-      <Option name="description" value="Corine Nomenklatur (Tabelle)" type="QString"/>
+      <Option name="description" value="CORINE-Metadaten (Tabelle)" type="QString"/>
       <Option name="flags" value="8" type="int"/>
       <Option name="metadata"/>
       <Option name="name" value="corinelegendetabelle" type="QString"/>
@@ -413,7 +413,7 @@
     </Option>
     <Option name="pfadraster2psql" type="Map">
       <Option name="default" value="raster2pgsql" type="QString"/>
-      <Option name="description" value="Pfad zu raster2psql (wenn nicht im Systempfad)" type="QString"/>
+      <Option name="description" value="Pfad zu raster2pgsql (wenn nicht im Systempfad)" type="QString"/>
       <Option name="flags" value="0" type="int"/>
       <Option name="metadata"/>
       <Option name="multiline" value="false" type="bool"/>
@@ -430,8 +430,8 @@
       <Option name="parameter_type" value="string" type="QString"/>
     </Option>
     <Option name="schutzgebietetabellenname" type="Map">
-      <Option name="default" value="classes_en" type="QString"/>
-      <Option name="description" value="db Tabellename Nomenklatur" type="QString"/>
+      <Option name="default" value="nomenklatur" type="QString"/>
+      <Option name="description" value="db Tabellename Metadaten" type="QString"/>
       <Option name="flags" value="0" type="int"/>
       <Option name="metadata"/>
       <Option name="multiline" value="false" type="bool"/>
@@ -441,7 +441,7 @@
     <Option name="stilqml" type="Map">
       <Option name="behavior" value="0" type="int"/>
       <Option name="default" type="invalid"/>
-      <Option name="description" value="Landcover Stil (*.qml)" type="QString"/>
+      <Option name="description" value="Land Cover-Stil (*.qml)" type="QString"/>
       <Option name="extension" value="" type="QString"/>
       <Option name="filefilter" value="" type="QString"/>
       <Option name="flags" value="0" type="int"/>
